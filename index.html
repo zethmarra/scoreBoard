@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basketball Scoreboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="scoreboard">
+    <div class="team home">
+      <h3>HOME</h3>
+      <div class="score" id="home-score">0</div>
+      <div class="bonus">BONUS</div>
+      <div class="bonus-toggle" onclick="toggleBonus(this)">☐</div>
+    </div>
+
+    <div class="game-info">
+      <div class="period-box">
+        <h3>PERIOD</h3>
+        <div class="score" id="period">1</div>
+      </div>
+    </div>
+
+    <div class="team guest">
+      <h3>GUEST</h3>
+      <div class="score" id="guest-score">0</div>
+      <div class="bonus">BONUS</div>
+      <div class="bonus-toggle" onclick="toggleBonus(this)">☐</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="home-controls">
+        <button id="home-plus" onclick="addHomePoints(1)">Home +1</button>
+        <button id="home-plus" onclick="addHomePoints(2)">Home +2</button>
+        <button id="home-plus" onclick="addHomePoints(3)">Home +3</button>
+        <button id="home-plus" onclick="minusHomePoints(1)">Home -1</button>
+    </div>
+    <div class="center-controls">
+        <button id="period-next" onclick="nextPeriod()">Next Period</button>
+        <button id="period-previous" onclick="previousPeriod()">Previous Period</button>
+        <button id="reset" onclick="reset()">Reset</button>
+    </div>
+    <div class="guest-controls">
+        <button id="guest-plus" onclick="addGuestPoints(1)">Guest +1</button>
+        <button id="guest-plus" onclick="addGuestPoints(2)">Guest +2</button>
+        <button id="guest-plus" onclick="addGuestPoints(3)">Guest +3</button>
+        <button id="guest-plus" onclick="minusGuestPoints(1)">Guest -1</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
