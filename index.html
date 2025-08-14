@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <title>Basketball Scoreboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link id="theme-style" rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="scoreboard">
-    <div class="team home">
-      <h3>HOME</h3>
-      <div class="score" id="home-score">0</div>
+  <div class="scoreboard" id="scoreboard">
+    <div class="team-home" id="team-home">
+      <h3>
+        <span id="home-logo"></span>
+        <span id="home-name">HOME</span>
+    </h3>
+      <div class="score"><span id="home-score">0</span></div>
       <div class="bonus">BONUS</div>
       <div class="bonus-toggle" onclick="toggleBonus(this)">☐</div>
     </div>
@@ -49,6 +52,17 @@
         <button id="guest-plus" onclick="addGuestPoints(3)">Guest +3</button>
         <button id="guest-plus" onclick="minusGuestPoints(1)">Guest -1</button>
     </div>
+  </div>
+  <div>
+    <label>Choose your favorite team</label>
+    <select class="team-select" id="team-select">
+        <option value="">--Select a team--</option>
+        <option value="lakers">Los Angeles Lakers</option>
+        <option value="bulls">Chicago Bulls</option>
+        <option value="warriors">Golden State Warriors</option>
+        <option value="celtics">Boston Celtics</option>
+        <option value="philadelphia">76ers</option>
+    </select>
   </div>
 
   <script src="script.js"></script>

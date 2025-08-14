@@ -15,8 +15,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background-color: #000;
-  border: 5px solid #444;
+  background-color: #0c33f4;
+  border: 5px solid white;
   border-radius: 15px;
   box-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
 }
@@ -36,16 +36,16 @@ h3 {
 .score {
   font-size: 100px;
   color: red;
-  background-color: #111;
+  background-color: white;
   padding: 10px 30px;
   border-radius: 8px;
-  border: 2px solid #600;
+  border: 2px solid red;
 }
 
 .bonus {
   font-size: 16px;
   margin-top: 5px;
-  color: yellow;
+  color: white;
 }
 
 .game-info {
@@ -56,10 +56,10 @@ h3 {
 }
 
 .controls button {
-  background-color: darkred;
+  background-color: #0c33f4;
   color: white;
   font-weight: bold;
-  border: 1px solid black;
+  border: 1px solid red;
   padding: 10px 20px;
   margin: 5px;
   border-radius: 5px;
@@ -67,7 +67,7 @@ h3 {
 }
 
 .controls button:hover {
-  background-color: crimson;
+  background-color: red;
 }
 
 .controls {
@@ -122,7 +122,3 @@ h3 {
   font-size: 16px;
   border-radius: 5px;
 }
-
-
-
-

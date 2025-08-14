@@ -15,10 +15,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background-color: #000;
+  background-color: #7c09ae;
   border: 5px solid #444;
   border-radius: 15px;
-  box-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(251, 236, 26, 0.5);
 }
 
 .team {
@@ -35,17 +35,17 @@ h3 {
 
 .score {
   font-size: 100px;
-  color: red;
+  color: gold;
   background-color: #111;
   padding: 10px 30px;
   border-radius: 8px;
-  border: 2px solid #600;
+  border: 2px solid gold;
 }
 
 .bonus {
   font-size: 16px;
   margin-top: 5px;
-  color: yellow;
+  color: gold;
 }
 
 .game-info {
@@ -56,10 +56,10 @@ h3 {
 }
 
 .controls button {
-  background-color: darkred;
-  color: white;
+  background-color: rgb(118, 8, 135);
+  color: gold;
   font-weight: bold;
-  border: 1px solid black;
+  border: 1px solid gold;
   padding: 10px 20px;
   margin: 5px;
   border-radius: 5px;
@@ -67,7 +67,7 @@ h3 {
 }
 
 .controls button:hover {
-  background-color: crimson;
+  background-color: rgb(89, 22, 244);
 }
 
 .controls {
@@ -108,7 +108,7 @@ h3 {
   display: inline-block;
   font-size: 24px;
   cursor: pointer;
-  color: red;
+  color: yellow;
   user-select: none;
   margin-left: 10px;
 }
@@ -122,7 +122,3 @@ h3 {
   font-size: 16px;
   border-radius: 5px;
 }
-
-
-
-

@@ -9,9 +9,12 @@ function addHomePoints(points) {
 }
 
 function minusHomePoints(points) {
-    const homeScoreEl = document.getElementById("home-score");
-    let currentScore = parseInt(homeScoreEl.textContent);
+  const homeScoreEl = document.getElementById("home-score");
+  let currentScore = parseInt(homeScoreEl.textContent);
+
+  if (currentScore >= points) {
     homeScoreEl.textContent = currentScore - points;
+  }
 }
 
 function addGuestPoints(points) {
@@ -21,9 +24,12 @@ function addGuestPoints(points) {
 }
 
 function minusGuestPoints(points) {
-    const guestScoreEl = document.getElementById("guest-score");
-    let currentScore = parseInt(guestScoreEl.textContent);
+  const guestScoreEl = document.getElementById("guest-score");
+  let currentScore = parseInt(guestScoreEl.textContent);
+
+  if (currentScore >= points) {
     guestScoreEl.textContent = currentScore - points;
+  }
 }
 
 function nextPeriod() {
@@ -55,3 +61,36 @@ function reset() {
     homeScoreEl.textContent = 0;
     guestScoreEl.textContent = 0;
 }
+
+const teamSelect = document.getElementById("team-select");
+const themeLink = document.getElementById("theme-style");
+const homeLogo = document.getElementById("home-logo");
+const homeName = document.getElementById("home-name");
+
+const teamLogos = {
+    lakers: "Lakers-logo.png",
+    bulls: "bulls-logo.gif",
+    warriors: "gsw-logo.png",
+    celtics: "celtics-logo.png",
+    philadelphia: "phila-logo.png",
+};
+
+teamSelect.addEventListener('change', function () {
+  const selectedTeam = teamSelect.value;
+
+  // Update CSS theme
+  themeLink.setAttribute("href", selectedTeam ? `${selectedTeam}.css` : "style.css");
+
+  // Update body class
+  document.body.className = selectedTeam;
+
+  // Update logo
+  if (teamLogos[selectedTeam]) {
+    homeLogo.innerHTML = `<img src="${teamLogos[selectedTeam]}" alt="${selectedTeam} logo" style="height: 50px;">`;
+    homeName.textContent = '';
+  } else {
+    homeLogo.innerHTML = '';
+    homeName.textContent = 'HOME';
+  }
+});
+
